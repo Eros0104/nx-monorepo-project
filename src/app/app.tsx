@@ -1,16 +1,13 @@
-import styled from 'styled-components';
-
+import { Route, Routes } from 'react-router-dom';
 import NxWelcome from './nx-welcome';
-
-const StyledApp = styled.div`
-  // Your style here
-`;
+import { Cart } from "@store/cart"
 
 export function App() {
   return (
-    <StyledApp>
-      <NxWelcome title="store" />
-    </StyledApp>
+    <Routes>
+      <Route path="/" element={<NxWelcome title="store" />} />
+      <Route path="/cart" element={<Cart />} />
+    </Routes>
   );
 }
 
